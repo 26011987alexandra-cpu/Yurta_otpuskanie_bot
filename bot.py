@@ -17,9 +17,9 @@ dp = Dispatcher()
 @dp.message(CommandStart())
 async def start(message: Message):
     await message.answer(
-        "🔥 Это место для твоих болей, обид и всего лишнего.\n\n"
-        "Напиши что угодно — и это исчезнет навсегда.\n"
-        "Никто не увидит. Никакой истории."
+        "🔥Тебя приветствует особый уголок Юрты Уюта, где может быть высказано и прозвучать то что хранилось годами. Это место для твоих болей, обид, безжизненного и того, чему пришло время быть высказанным и уйти в переработку во благо живого .\n\n"
+        "Напиши — и это исчезнет навсегда.\n"
+        "Никто не увидит. Конфиденциально и мягко."
     )
 
 
@@ -32,7 +32,7 @@ async def burn_message(message: Message):
         pass  # если нет прав — просто пропускаем
 
     # Отправляем подтверждение и тут же удаляем его через 3 секунды
-    confirm = await message.answer("🔥 сожжено")
+    confirm = await message.answer("Обнимаю с Любовью🤍")
     await asyncio.sleep(3)
     try:
         await confirm.delete()
@@ -47,7 +47,7 @@ async def burn_any(message: Message):
         await message.delete()
     except Exception:
         pass
-    confirm = await message.answer("🔥 сожжено")
+    confirm = await message.answer("Обнимаю с Любовью🤍")
     await asyncio.sleep(3)
     try:
         await confirm.delete()
