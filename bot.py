@@ -19,7 +19,8 @@ async def start(message: Message):
         "Тебя приветствует 🚀\n"
         "особый уголок Юрты Уюта! 🤍\n\n"
         "Здесь может быть высказано и прозвучать то, что хранилось годами.\n"
-        "Это место для твоих болей, обид, безжизненного и того, чему пришло время быть высказанным и уйти в переработку во благо живого. 🌱\n\n"
+        "Это место для твоих болей, обид, безжизненного и того, чему пришло время "
+        "быть высказанным и уйти в переработку во благо живого. 🌱\n\n"
         "Напиши — и это исчезнет навсегда. 💫\n"
         "Никто не увидит.\n"
         "Конфиденциально и мягко. 🤍"
@@ -32,24 +33,12 @@ async def burn_message(message: Message):
         await message.delete()
     except Exception:
         pass
-    confirm = await message.answer("Обнимаю с Любовью 🤍")
-    await asyncio.sleep(3)
-    try:
-        await confirm.delete()
-    except Exception:
-        pass
 
 
 @dp.message()
 async def burn_any(message: Message):
     try:
         await message.delete()
-    except Exception:
-        pass
-    confirm = await message.answer("Обнимаю с Любовью 🤍")
-    await asyncio.sleep(3)
-    try:
-        await confirm.delete()
     except Exception:
         pass
 
@@ -60,3 +49,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
